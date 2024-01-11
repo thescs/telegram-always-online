@@ -2,3 +2,4 @@
 __pycache__/
 session_file.session
 *.pyc
+.env

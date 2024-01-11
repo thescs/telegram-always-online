@@ -1,16 +1,18 @@
-# -*- coding: utf-8 -*-
-
 import logging
 from login import client
 from telethon.tl.functions.account import UpdateStatusRequest
 import time
-from data import delay
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+delay = os.getenv("DELAY")
 
 if client.is_user_authorized():
-    logging.info("You are now AlwaysOnline™, Yah!")
+    logging.info("You are now always ONLINE")
     while True:
-        client(UpdateStatusRequest(offline=False))
-        time.sleep(delay)
-        logging.debug("Sleep for 1 min")
+        result = client(UpdateStatusRequest(offline=False))
+        time.sleep(int(delay))
+        logging.debug(F"Sleep for {delay} seconds...")
 else:
-    logging.fatal("Login Fails, please retry... 失败，请重试！")
+    logging.fatal("Login FAILED! Please, try again.")

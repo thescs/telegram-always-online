@@ -1,46 +1,88 @@
-# AlwaysOnline™
 
-Keep your Telegram Always Online.
-让你的 Telegram 永远"在线"
+# telegram-always-online
 
-使用了开源项目 - Many Thanks to project: https://github.com/LonamiWebs/Telethon/
+  
 
-# 背景
+🇺🇸 Keep your Telegram always online.
 
-Don't let others peak on your daily routine with recent online! So keep yourself always online. XD  
-如果你不想被人通过在线时间判断作息规律，那就让自己一直保持在线吧！  
-（这样子就算你让所有人看见你的在线时间也无所谓咯，同时你还可以看到别人的）  
+🇷🇺 Поддерживает в вашем аккаунте постоянный онлайн.
 
-# 需求 Prerequisite
+Thanks: https://github.com/abusetelegram/AlwaysOnline-
 
-`PYTHON3`  
-`一台可以连接到Telegram的服务器`  
+  
 
-需要包：`Telethon`  
-使用这个指令直接安装到全局 | Install package globally with ：`pip3 install telethon==0.19.1.6`  
+# Information | Информация
 
-# 如何使用？ How to use
+🇺🇸 Don't let others peak on your daily routine with recent online! So keep yourself always online.
 
-- 首先，你需要一个 `Client Token`(这个可以在 https://my.telegram.org 申请)
-    - 教程：https://github.com/NeverBehave/AlwaysOnline-/blob/master/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/%E5%A6%82%E4%BD%95%E7%94%B3%E8%AF%B7Client%20Token.md
-- `git clone https://github.com/NeverBehave/AlwaysOnline-` 或者下载压缩包解压
-- 将 `api_id` 和 `api_hash` 填入 `data.py` 适当的位置
-    - Fill in your id and hash @ `data.py`
-- `python3 main.py`
-- 按照指引完成登录
-    - Follow the instruction and you are good to go !
+🇷🇺 Не позволяйте посторонним людям отслеживать ваш онлайн, ведь это может сыграть не в вашу пользу. Так что сбейте их с толку - будьте онлайн постоянно!
 
-# 提示 Tips
+  
 
-- 不要在**不安全**的地方部署这个脚本，妥善地保管好目录下的`Session`文件，否则相当于给予**任何人访问你的账号的权限** 
-    - Take good care of the `session` file under this directory, or your account will be at risk.
-- 这个脚本不会使你的消息变为已读，你不会在日常使用中察觉到脚本的存在
-    - You can still use your account normally. Nothing else will change (Message count, etc.).
-     
+# Requeriments | Требования
 
-# 原理 How it works
+  
+#### Python3
+There is nothing tricky here (тут ничего хитрого нет):
+`sudo apt install python3`
+#### Telethon
+🇺🇸 We will need an older version of Telethon. The script will not work with the latest version.
+🇷🇺 Версия Telethon нам нужна более старшая. С последнией версией скрипт не будет работать.
+`pip3 install telethon==0.19.1.6`
+#### python-dotenv
+`pip install python-dotenv `
 
-Send an online status message to Telegram periodically. Your actions are not necessary change your online status.  
-间歇性的给 Telegram 发送你在线的信息，实际上你发送信息并不意味着你上线，只有你主动改变了你的状态  
-How weird Telegram API is.  
-这就是为什么 Telegram 的 API 很奇怪  
+  
+
+# How to use | Как использовать?
+
+  
+
+ 1. 🇺🇸 You need to get telegram API access data. You can obtain it here: 
+🇷🇺 Вам небходимо получить данные для доступа к Telegram API. Это можно сделать тут:
+https://my.telegram.org
+![9704fe13c382b5a4682727f859edce82.png](https://imgtr.ee/images/2024/01/11/9704fe13c382b5a4682727f859edce82.png)
+
+ 2. 🇺🇸 You need the `api_id` and `api_hash` values. Rename file `.env.example` to `.env` then specify them in your `.env` file.
+ 🇷🇺 Вам необходимы значения `api_id` и `api_hash`. Переименуйте файл `.env.example`  в `.env` и укажите их в вашем `.env` файле.
+
+ 3. 🇺🇸 If you wish, you can change the delay in updating your online service. Specify the interval in seconds in `DELAY` in `.env`. Settings below 15 seconds are not recommended.
+🇷🇺 По желанию, вы можете изменить задержку в обновлении вашего онлайна. Укажите интервал в секундах в `DELAY` в `.env`. Не рекомендуется установка ниже 15 секунд.
+
+ 4.  `python3 main.py`
+
+ 5. Follow the instruction and you are good to go !
+
+  
+
+# Tips | Заметки
+
+### 🇺🇸 English
+- Do not deploy this script in an **unsecure** location and take care to have the necessary permissions on the `Session` file in the directory. Leaking this file is tantamount to giving **anyone permission to access your Telegram account**.
+- This script does not mark your messages as read and works silently.
+- You can still use your account as normal.
+
+### 🇷🇺 Русский
+ - Не развертывайте этот скрипт в **небезопасном** месте и позаботьтесь о необходимых правах доступа к файлу `Session` в каталоге. Утечка этого файла  равносильна предоставлению **кому-либо разрешения на доступ к вашему аккаунту Telegram**.
+ - Этот скрипт не отмечает ваши сообщения прочитанными и работает незаметно.
+- Вы по-прежнему можете пользоваться своей учетной записью в обычном режиме.
+
+
+  
+
+# How it works | Как это работает?
+### 🇺🇸 English
+The script is a very ordinary Telegram client that works similar to the application on your phone.
+At the time of the first launch, you will need to indicate your phone number in international format (+...), indicate a one-time password that will be sent to you in Telegram on another device, as well as *two-factor authentication password*, if you have one. *If two-factor authentication is disabled, then the request `If you have 2FA password, please enter right now. This Password will not be stored.` Do not enter anything, just press Enter.*
+
+*Please note that in some cases the one-time password may be requested twice by the script. You need to enter it in both cases.*
+
+After successful authorization, you will see the message `You are now always ONLINE`, this means that the script has launched and is working successfully.
+
+### 🇷🇺 Русский
+Скрипт представляет собой самый обычный Telegram-клиент, который работает по аналогии с приложением в вашем телефоне.
+В момент первого запуска, вам необходимо будет указать ваш номер телефона в международном формате (+...), указать одноразовый пароль, который придёт вам в Telegram на другом устройстве, а также *пароль двухфакторной авторизации*, если он у вас установлен. *Если двухфакторная авторизация у вас отключена, то на запрос `If you have 2FA password, please enter right now. This Password will not be stored.` ничего не вводите, просто нажмите Enter.*
+
+*Обратите внимание, что в некоторых случаях одноразовый пароль может быть запрошен скриптом дважды. Вам необходимо в обоих случаях его ввести.*
+
+После успешной авторизации вы увидете сообщение `You are now always ONLINE`, это значит, что скрипт запустился и успешно работает.
