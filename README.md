@@ -26,7 +26,7 @@ Thanks: https://github.com/abusetelegram/AlwaysOnline-
 There is nothing tricky here (тут ничего хитрого нет):
 `sudo apt install python3`
 #### Telethon
-🇺🇸 We will need an older version of Telethon. The script will not work with the latest version.
+🇺🇸 We will need an older version of Telethon. The script will not work with the latest version.  
 🇷🇺 Версия Telethon нам нужна более старшая. С последнией версией скрипт не будет работать.
 `pip3 install telethon==0.19.1.6`
 #### python-dotenv
@@ -38,19 +38,19 @@ There is nothing tricky here (тут ничего хитрого нет):
 
   
 
- 1. 🇺🇸 You need to get telegram API access data. You can obtain it here: 
+ 1. 🇺🇸 You need to get telegram API access data. You can obtain it here:  
 
-🇷🇺 Вам небходимо получить данные для доступа к Telegram API. Это можно сделать тут:
+🇷🇺 Вам небходимо получить данные для доступа к Telegram API. Это можно сделать тут:  
 
-https://my.telegram.org
+https://my.telegram.org  
 
 ![9704fe13c382b5a4682727f859edce82.png](https://imgtr.ee/images/2024/01/11/9704fe13c382b5a4682727f859edce82.png)
 
- 2. 🇺🇸 You need the `api_id` and `api_hash` values. Rename file `.env.example` to `.env` then specify them in your `.env` file.
+ 2. 🇺🇸 You need the `api_id` and `api_hash` values. Rename file `.env.example` to `.env` then specify them in your `.env` file.  
  
  🇷🇺 Вам необходимы значения `api_id` и `api_hash`. Переименуйте файл `.env.example`  в `.env` и укажите их в вашем `.env` файле.
 
- 3. 🇺🇸 If you wish, you can change the delay in updating your online service. Specify the interval in seconds in `DELAY` in `.env`. Settings below 15 seconds are not recommended.
+ 3. 🇺🇸 If you wish, you can change the delay in updating your online service. Specify the interval in seconds in `DELAY` in `.env`. Settings below 15 seconds are not recommended.  
 
 🇷🇺 По желанию, вы можете изменить задержку в обновлении вашего онлайна. Укажите интервал в секундах в `DELAY` в `.env`. Не рекомендуется установка ниже 15 секунд.
 
