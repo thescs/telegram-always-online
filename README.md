@@ -39,14 +39,19 @@ There is nothing tricky here (тут ничего хитрого нет):
   
 
  1. 🇺🇸 You need to get telegram API access data. You can obtain it here: 
+
 🇷🇺 Вам небходимо получить данные для доступа к Telegram API. Это можно сделать тут:
+
 https://my.telegram.org
+
 ![9704fe13c382b5a4682727f859edce82.png](https://imgtr.ee/images/2024/01/11/9704fe13c382b5a4682727f859edce82.png)
 
  2. 🇺🇸 You need the `api_id` and `api_hash` values. Rename file `.env.example` to `.env` then specify them in your `.env` file.
+ 
  🇷🇺 Вам необходимы значения `api_id` и `api_hash`. Переименуйте файл `.env.example`  в `.env` и укажите их в вашем `.env` файле.
 
  3. 🇺🇸 If you wish, you can change the delay in updating your online service. Specify the interval in seconds in `DELAY` in `.env`. Settings below 15 seconds are not recommended.
+
 🇷🇺 По желанию, вы можете изменить задержку в обновлении вашего онлайна. Укажите интервал в секундах в `DELAY` в `.env`. Не рекомендуется установка ниже 15 секунд.
 
  4.  `python3 main.py`
@@ -73,7 +78,7 @@ https://my.telegram.org
 # How it works | Как это работает?
 ### 🇺🇸 English
 The script is a very ordinary Telegram client that works similar to the application on your phone.
-At the time of the first launch, you will need to indicate your phone number in international format (+...), indicate a one-time password that will be sent to you in Telegram on another device, as well as *two-factor authentication password*, if you have one. *If two-factor authentication is disabled, then the request `If you have 2FA password, please enter right now. This Password will not be stored.` Do not enter anything, just press Enter.*
+At the time of the first launch, you will need to indicate your phone number in international format (+...), indicate a one-time password that will be sent to you in Telegram on another device, as well as *two-factor authentication password*, if you have one. *If two-factor authentication is disabled, then the request `If you have 2FA password, please enter right now. This Password will not be stored.`, do not enter anything, just press Enter.*
 
 *Please note that in some cases the one-time password may be requested twice by the script. You need to enter it in both cases.*
 
