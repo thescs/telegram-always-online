@@ -1,4 +1,6 @@
 # **ACTUALLY NOT WORKING BECAUSE TELEGRAM DOESN`T SUPPORT THIS TELETHON LIBRARY**
+
+# **БОЛЕЕ НЕ РАБОТАЕТ С ЭТОЙ ВЕРСИЕЙ TELETHON**
 # telegram-always-online
 
   
